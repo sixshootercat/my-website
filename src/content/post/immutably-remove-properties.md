@@ -3,9 +3,10 @@ title: "Immutably remove object properties in JavaScript"
 description: "An alternative approach for removing object properties without the use of the delete operator."
 publishDate: "5 December 2021"
 tags: ["javascript", "programming"]
+coverImage:
+  src: "./spread_operator.png"
+  alt: "JS pread operator"
 ---
-
-![Astro theme cactus logo](./spread_operator.png)
 
 ## <a id="introduction" href="#introduction" class="markdown-heading">Introduction</a>
 

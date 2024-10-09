@@ -3,9 +3,12 @@ title: "The Hidden Cost: Why Dead Code Shouldn't Linger in Your Codebase"
 description: "A deeper look into how dead code negatively impacts systems and strategies to deal with it."
 publishDate: "12 July 2023"
 tags: ["clean code", "programming"]
+coverImage:
+  src: "./i_see_dead_code.jpg"
+  alt: "Sixth sense actor in a dark room"
 ---
 
-![Astro theme cactus logo](./i_see_dead_code.jpg)
+<!-- ![Astro theme cactus logo](./i_see_dead_code.jpg) -->
 
 ## <a id="intro-and-background" href="#intro-and-background" class="markdown-heading">Intro and Background</a>
 
