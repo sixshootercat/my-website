@@ -55,7 +55,7 @@ const technologies: { desc: string; href: string; title: string }[] = [
 			alt="Kevin Ruhl"
 			width={250}
 			height={250}
-			class="mb-10 rounded-3xl"
+			class="card-shadow mb-10 rounded-3xl"
 		/>
 		<h1 class="title mb-6">About me</h1>
 		<p class="mb-4">
@@ -101,3 +101,13 @@ const technologies: { desc: string; href: string; title: string }[] = [
 		</dl>
 	</section>
 </PageLayout>
+
+<style>
+	.card-shadow {
+		box-shadow: 7px 7px 0 rgb(15, 15, 15);
+		transition: box-shadow 0.2s ease-in-out;
+	}
+	.card-shadow:hover {
+		box-shadow: 3px 3px 0 rgb(15, 15, 15);
+	}
+</style>
