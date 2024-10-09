@@ -3,12 +3,13 @@ import SocialList from "@/components/SocialList.astro";
 import PostPreview from "@/components/blog/PostPreview.astro";
 import { getAllPosts, sortMDByDate } from "@/data/post";
 import PageLayout from "@/layouts/Base.astro";
+import { Image } from "astro:assets";
 
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 
-const cactusTech: { desc: string; href: string; title: string }[] = [
+const technologies: { desc: string; href: string; title: string }[] = [
 	{
 		desc: "Build fast websites, faster.",
 		href: "https://astro.build",
@@ -54,11 +55,19 @@ const cactusTech: { desc: string; href: string; title: string }[] = [
 
 <PageLayout meta={{ title: "Home" }}>
 	<section>
-		<h1 class="title mb-6">Hello World!</h1>
+		<Image
+			src="/kevin_ruhl.jpg"
+			alt="Kevin Ruhl"
+			width={250}
+			height={250}
+			class="mb-10 rounded-3xl"
+		/>
+		<h1 class="title mb-6">Senior Software Engineer @Solvd</h1>
 		<p class="mb-4">
-			Hi, I’m a theme for Astro, a simple starter that you can use to create your website or blog.
-			If you want to know more about how you can customise me, add more posts, and make it your own,
-			click on the GitHub icon link below and it will take you to my repo.
+			I'm a Software Engineer working with the React.js and JavaScript ecosystem. Passionate and
+			committed to building user friendly, richly interactive, and performant web applications.
+			Thinker and explorer of ideas. I enjoy reading and writing and sometimes remember to publish
+			my thoughts on the internet.
 		</p>
 		<SocialList />
 	</section>
@@ -79,7 +88,7 @@ const cactusTech: { desc: string; href: string; title: string }[] = [
 		<h2 class="title mb-4 text-xl">Technologies</h2>
 		<dl class="space-y-4">
 			{
-				cactusTech.map(({ desc, href, title }) => (
+				technologies.map(({ desc, href, title }) => (
 					<div class="flex flex-col gap-2 sm:flex-row">
 						<dt>
 							<span class="flex">
