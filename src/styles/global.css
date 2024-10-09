@@ -7,7 +7,9 @@
 	:root[data-theme="light"] {
 		color-scheme: light;
 		/* https://tailwindcss.com/docs/customizing-colors#using-css-variables */
-		--theme-bg: 0deg 0% 98%;
+		/* --theme-bg: 0deg 0% 98%; */
+		/* --theme-bg: 52deg 94% 94%; */
+		--theme-bg: 42deg 100% 95%;
 		--theme-link: 172deg 18% 41%;
 		--theme-text: 203deg 11% 15%;
 		--theme-accent: 210deg 100% 12%;
@@ -17,7 +19,7 @@
 
 	:root[data-theme="dark"] {
 		color-scheme: dark;
-		--theme-bg: 210deg 6% 12%;
+		--theme-bg: 210deg 60% 12%;
 		--theme-link: 220deg 49% 67%;
 		--theme-text: 220deg 3% 79%;
 		--theme-accent: 204deg 29% 55%;
