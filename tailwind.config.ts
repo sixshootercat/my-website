@@ -43,6 +43,7 @@ export default {
 				link: "hsl(var(--theme-link) / <alpha-value>)",
 				quote: "hsl(var(--theme-quote) / <alpha-value>)",
 				textColor: "hsl(var(--theme-text) / <alpha-value>)",
+        "card-shadow-color": "hsl(var(--theme-card-shadow-color) / <alpha-value>)",
 			},
 			fontFamily: {
 				// Add any custom fonts here

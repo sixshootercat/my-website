@@ -50,15 +50,24 @@ const technologies: { desc: string; href: string; title: string }[] = [
 
 <PageLayout meta={{ title: "Home" }}>
 	<section>
-		<Image
-			src="/kevin_ruhl.jpg"
-			alt="Kevin Ruhl"
-			width={250}
-			height={250}
-			class="card-shadow mb-10 rounded-3xl"
-		/>
+		<div class="group relative inline-block">
+			<Image
+				src="/hand-drawn-highlights.png"
+				alt="highlights"
+				width={50}
+				height={50}
+				class="absolute bottom-[-35px] left-[290px] hidden -translate-x-3/4 -translate-y-3/4 rotate-180 group-hover:block"
+			/>
+			<Image
+				src="/kevin_ruhl.jpg"
+				alt="Kevin Ruhl"
+				width={250}
+				height={250}
+				class="card-shadow mb-10"
+			/>
+		</div>
 		<h1 class="title mb-6">About me</h1>
-		<p class="mb-4">
+		<p class="card-shadow mb-5 border-b-2 border-t-2 border-solid border-gray-500 py-4">
 			Welcome! I'm Kevin, a software engineer primarily building in the React.js and JavaScript
 			ecosystem. These days I am focusing on frontend architecture, web performance, accessibility,
 			and security. Thinker and explorer of new ideas. You can always find me reading and learning
@@ -69,7 +78,7 @@ const technologies: { desc: string; href: string; title: string }[] = [
 	</section>
 	<section aria-label="Blog post list" class="mt-16">
 		<h2 class="title mb-4 text-xl">Posts</h2>
-		<ul class="space-y-4">
+		<ul class="card-shadow mb-4 space-y-4 border-b-2 border-t-2 border-solid border-gray-500 py-4">
 			{
 				allPostsByDate.map((p) => (
 					<li class="grid gap-2 sm:grid-cols-[auto_1fr] sm:[&_q]:col-start-2">
@@ -82,7 +91,9 @@ const technologies: { desc: string; href: string; title: string }[] = [
 	</section>
 	<section class="mt-16">
 		<h2 class="title mb-4 text-xl">Technologies</h2>
-		<dl class="space-y-4">
+		<dl
+			class="card-shadow mb-4 space-y-4 border-b-2 border-t-2 border-solid border-gray-500 py-4 underline-offset-2"
+		>
 			{
 				technologies.map(({ desc, href, title }) => (
 					<div class="flex flex-col gap-2 sm:flex-row">
@@ -103,11 +114,22 @@ const technologies: { desc: string; href: string; title: string }[] = [
 </PageLayout>
 
 <style>
-	.card-shadow {
-		box-shadow: 7px 7px 0 rgb(15, 15, 15);
-		transition: box-shadow 0.2s ease-in-out;
+	:root {
+		--card-shadow-color: rgba(15, 15, 15, 0.86);
+		--card-shadow-hover-color: rgba(15, 15, 15, 0.86);
 	}
+
+	:root[data-theme="dark"] {
+		--card-shadow-color: rgba(15, 15, 15, 0.86);
+		--card-shadow-hover-color: rgba(15, 15, 15, 0.86);
+	}
+
+	.card-shadow {
+		/* box-shadow: 7px 7px 0 var(--card-shadow-color); */
+		transition: box-shadow 0.3s ease-in-out;
+	}
+
 	.card-shadow:hover {
-		box-shadow: 3px 3px 0 rgb(15, 15, 15);
+		box-shadow: 5px 5px 0 var(--card-shadow-hover-color);
 	}
 </style>
