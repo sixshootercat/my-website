@@ -63,7 +63,7 @@ const technologies: { desc: string; href: string; title: string }[] = [
 				alt="Kevin Ruhl"
 				width={250}
 				height={250}
-				class="card-shadow mb-10"
+				class="card-shadow mb-10 rounded-lg"
 			/>
 		</div>
 		<h1 class="title mb-6">About me</h1>
@@ -119,17 +119,12 @@ const technologies: { desc: string; href: string; title: string }[] = [
 		--card-shadow-hover-color: rgba(15, 15, 15, 0.86);
 	}
 
-	:root[data-theme="dark"] {
-		--card-shadow-color: rgba(15, 15, 15, 0.86);
-		--card-shadow-hover-color: rgba(15, 15, 15, 0.86);
-	}
-
 	.card-shadow {
 		/* box-shadow: 7px 7px 0 var(--card-shadow-color); */
-		transition: box-shadow 0.3s ease-in-out;
+		transition: box-shadow 0.25s ease-in-out;
 	}
 
 	.card-shadow:hover {
-		box-shadow: 5px 5px 0 var(--card-shadow-hover-color);
+		box-shadow: 6px 6px 0 var(--card-shadow-hover-color);
 	}
 </style>
