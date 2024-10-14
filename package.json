@@ -4,7 +4,7 @@
 	"private": false,
 	"scripts": {
 		"dev": "astro dev",
-		"build": "npx astro build ./",
+		"build": "astro build",
 		"postbuild": "pagefind --site dist",
 		"preview": "npx astro preview --node",
     "build:node": "npx astro build ./ --node",
