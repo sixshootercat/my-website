@@ -6,4 +6,14 @@ tags: ["test"]
 draft: true
 ---
 
-If this is working correctly, this post should only be accessible in a dev environment, as well as any tags that are unique to this post.
+## This is the title
+
+## References
+
+An example containing a clickable reference[^1] with a link to the source.
+
+Second example containing a reference[^2] with a link to the source.
+
+[^1]: Reference first footnote with a return to content link.
+
+[^2]: Second reference with a link.

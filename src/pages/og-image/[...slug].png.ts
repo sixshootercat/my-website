@@ -9,7 +9,7 @@ import satori, { type SatoriOptions } from "satori";
 import { html } from "satori-html";
 
 const ogOptions: SatoriOptions = {
-	// debug: true,
+	debug: true,
 	fonts: [
 		{
 			data: Buffer.from(RobotoMono),
