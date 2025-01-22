@@ -21,6 +21,11 @@ const {
 		const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 		const isIOSBrowser = /CriOS|EdgiOS/.test(navigator.userAgent);
 
+		// Handle browser back/forward
+		window.addEventListener("popstate", () => {
+			window.location = window.location.href;
+		});
+
 		document.addEventListener("click", (e) => {
 			if (!isIOS || !isIOSBrowser) {
 				return;
