@@ -6,7 +6,7 @@ tags: ["test"]
 draft: true
 ---
 
-## This is the title
+## How to learn technical concepts
 
 ## References
 

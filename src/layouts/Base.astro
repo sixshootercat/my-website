@@ -17,6 +17,29 @@ const {
 ---
 
 <html class="scroll-smooth" lang={siteConfig.lang}>
+	<script is:inline>
+		const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+		const isIOSBrowser = /CriOS|EdgiOS/.test(navigator.userAgent);
+
+		document.addEventListener("click", (e) => {
+			if (!isIOS || !isIOSBrowser) {
+				return;
+			}
+
+			const target = e.target;
+			const link = target.closest("a");
+			if (!link) return;
+
+			const shouldPushState =
+				link &&
+				link.href &&
+				link.href.startsWith(window.location.origin) &&
+				!link.href.includes("#");
+			if (!shouldPushState) return;
+			history.pushState(null, "", link.href);
+			window.dispatchEvent(new PopStateEvent("popstate"));
+		});
+	</script>
 	<BaseHead articleDate={articleDate} description={description} ogImage={ogImage} title={title} />
 	<body
 		class="mx-auto flex min-h-screen max-w-3xl flex-col bg-bgColor px-4 pt-6 font-mono text-sm font-normal text-textColor antialiased sm:px-8"
