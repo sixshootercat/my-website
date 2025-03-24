@@ -28,7 +28,7 @@ Back to Tailwind. It is a utility-first CSS framework that offers an alternative
 
 ## <a id="tailwind-landscape" href="#the-tailwind-landscape-lovers-skeptics-and-critics" class="markdown-heading">The Tailwind Landscape: Lovers, Skeptics, and Critics</a>
 
-Some developers are using Tailwind and genuinely love it, others may be considering giving it a test drive to see what all the fuss is about, and there are even those who will die on the “Tailwind is the devil, CSS is the salvation” hill.
+Some developers are using Tailwind and genuinely love it, others may be considering giving it a test drive to see what all the fuss is about, and there are yet those who will die on the "Tailwind turns HTML into an unreadable mess" hill. Honestly, Tailwind is not for everyone. And the utility classes can make your HTML look a bit noisy and cluttered. But it is a cost I am willing to pay for the benefits it provides.
 
 That’s fine. We all have our philosophies, beliefs, and preferences when it comes to tech tools and approaches. I get it. Tailwind is not for everyone. It is a utility-first CSS framework, and some developers prefer to write raw CSS or use a preprocessor like SCSS. That’s fine. Tailwind is not a silver bullet, and it has its own set of trade-offs. It has its own set of limitations. But it is a pragmatic choice for many teams and developers who want to ship UIs faster and more consistently. These benefits are hard to ignore, especially for small teams and startups that need to move fast and iterate quickly. Tailwind is a great choice for them. Loads of tech companies, early startups, and solo devs are all building and shipping their UIs using Tailwind. And they are doing it very rapidly.
 
