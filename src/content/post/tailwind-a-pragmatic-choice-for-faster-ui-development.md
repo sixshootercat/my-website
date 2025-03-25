@@ -1,5 +1,5 @@
 ---
-title: "Tailwind CSS: The Pragmatic Choice for Faster UI Development"
+title: "Tailwind CSS: A Pragmatic Choice for Faster UI Development"
 description: "Understanding the Benefits, Trade-offs, and Adoption of Tailwind CSS"
 publishDate: "4 March 2024"
 tags: ["css", "tailwind", "web development"]
@@ -40,7 +40,7 @@ Before Tailwind came onto the scene, creating a custom design system meant eithe
 
 Tailwind, however, took a different approach. It said:
 
-> Naming CSS classes, managing rules, and handling specificity conflicts is a hassle. Here are utility classes you can inline to cover most common use cases, so you don’t have to worry about styling overhead or remembering class names. We’ll also tree-shake unused styles in production to improve performance. Plus, you can easily build your own theme and design system using our primitives, or just use our default theme.
+> Naming CSS classes, managing rules, and handling specificity conflicts is a hassle. Here are utility classes you can inline to cover most common use cases, so you don’t have to worry about styling overhead or remembering class names. We’ll also tree-shake unused styles in production to improve performance. Plus, you can easily build your own theme and design system using our primitives, or just use our default theme. Up to you!
 
 It became the missing answer for teams and companies who lacked deep CSS expertise but also did not want to pay the cost of getting married to a pre-styled UI component library (although TW does play nicely with things like Material UI) just to reap the benefits of a production-ready CSS theme and design system. Tailwind came in and filled that gap, which helped tons of developer teams build UIs faster. Its impact on the developer community and the industry as a whole is undeniable.
 
