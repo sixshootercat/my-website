@@ -8,44 +8,6 @@ import { Image } from "astro:assets";
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
-
-const technologies: { desc: string; href: string; title: string }[] = [
-	{
-		desc: "The web framework for content-driven websites.",
-		href: "https://astro.build",
-		title: "Astro",
-	},
-	{
-		desc: "Rapidly build modern websites without ever leaving your HTML.",
-		href: "https://tailwindcss.com",
-		title: "Tailwind CSS",
-	},
-	{
-		desc: "A powerful, open source object-relational database system.",
-		href: "https://www.postgresql.org/",
-		title: "Postgres",
-	},
-	{
-		desc: "A strongly typed programming language that builds on JavaScript.",
-		href: "https://www.typescriptlang.org/",
-		title: "TypeScript",
-	},
-	{
-		desc: "The React Framework for the Web.",
-		href: "https://nextjs.org/",
-		title: "Next.js",
-	},
-	{
-		desc: "A JavaScript runtime built on Chrome's V8 JavaScript engine.",
-		href: "https://nodejs.org/",
-		title: "Node.js",
-	},
-	{
-		title: "NestJS",
-		href: "https://nestjs.com/",
-		desc: "A progressive Node.js framework for building efficient and scalable server-side applications.",
-	},
-];
 ---
 
 <PageLayout meta={{ title: "Home" }}>
@@ -69,51 +31,38 @@ const technologies: { desc: string; href: string; title: string }[] = [
 			/>
 		</div>
 		<h1 class="title mb-6">About me</h1>
-		<p class="card-shadow mb-5 border-b-2 border-t-2 border-solid border-gray-500 py-4">
-			Welcome! I'm Kevin, a software engineer primarily building in the React.js and JavaScript
-			ecosystem. These days I am focusing on frontend architecture, web performance, accessibility,
-			and security.
+		<div class="card-shadow mb-5 border-b-2 border-t-2 border-solid border-gray-500 py-4">
+			<p>
+				Greetings, traveller! I'm Kev, a software engineer mostly building on the web with
+				JavaScript/TypeScript, Golang, and Python. My interests revolve around:
+			</p>
 			<br />
+			<li>Serverless architecture</li>
+			<li>Distributed systems</li>
+			<li>Generative AI</li>
+			<li>Web security</li>
+			<li>Observability</li>
+			<li>Frontend architecture at scale</li>
+			<li>Web accessibility</li>
 			<br />
-			Thinker and explorer of new ideas. You can always find me reading and learning about new stuff
-			and sometimes writing about it. At times I remember to publish my thoughts on the internet.
-		</p>
+			I'm often exploring new ideas and diving into new technologies and concepts that challenge my thinking.
+			I’m usually reading, often learning, and occasionally writing about what I learn and discover.
+			Every now and then, I remember to publish and share my thoughts in the form of blog posts.
+		</div>
 		<SocialList />
 	</section>
 	<section aria-label="Blog post list" class="mt-16">
 		<h2 class="title mb-4 text-xl">Posts</h2>
 		<ul class="card-shadow mb-4 space-y-4 border-b-2 border-t-2 border-solid border-gray-500 py-4">
 			{
-				allPostsByDate.map((p) => (
+				allPostsByDate.map((post) => (
 					<li class="grid gap-2 sm:grid-cols-[auto_1fr] sm:[&_q]:col-start-2">
 						{/* @ts-ignore-next-line - issue with -> @astrojs/check@0.9.3 */}
-						<PostPreview post={p} />
+						<PostPreview post={post} />
 					</li>
 				))
 			}
 		</ul>
-	</section>
-	<section class="mt-16">
-		<h2 class="title mb-4 text-xl">Technologies</h2>
-		<dl
-			class="card-shadow mb-4 space-y-4 border-b-2 border-t-2 border-solid border-gray-500 py-4 underline-offset-2"
-		>
-			{
-				technologies.map(({ desc, href, title }) => (
-					<div class="flex flex-col gap-2 sm:flex-row">
-						<dt>
-							<span class="flex">
-								<a class="cactus-link" href={href} rel="noreferrer" target="_blank">
-									{title}
-								</a>
-								:
-							</span>
-						</dt>
-						<dd>{desc}</dd>
-					</div>
-				))
-			}
-		</dl>
 	</section>
 </PageLayout>
 
